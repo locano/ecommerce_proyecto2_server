@@ -3,6 +3,6 @@ const router = Router();
 
 const { login } = require('../controllers/index.controller');
 
-router.get('/usuarios', login)
+router.get('/api/login', login)
 
 module.exports = router;

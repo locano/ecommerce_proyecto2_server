@@ -1,23 +1,8 @@
 var mysql = require('mysql');
 const psw = require('../../password');
 
-/*
-// PARAMETROS DE CONEXION DENTRO DEL SERVIDOR
-var connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'usuarios',
-    password: psw.password,
-    database: 'usuarios_proyecto2'
-});
-*/
-
-//Parametros de conexion local
-var connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'usuarios_proyecto2'
-});
+var mysql_parameters = require('../config/mysql.config'); 
+var connection = mysql.createConnection(mysql_parameters);
 
 connection.connect();
 
